@@ -60,4 +60,4 @@
 	url = https://github.com/veygax/valve-internal-enabler
 [submodule "plugins/dotastats"]
 	path = plugins/dotastats
-	url = https://github.com/BambooFury/dotastats.git
+	url = https://github.com/BambooFury/Dota-Stats.git
