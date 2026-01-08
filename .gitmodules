@@ -64,3 +64,6 @@
 [submodule "plugins/steam-change-window-params"]
 	path = plugins/steam-change-window-params
 	url = https://github.com/ricewind012/steam-change-window-params
+[submodule "plugins/RSS-feed-in-whats-new"]
+	path = plugins/RSS-feed-in-whats-new
+	url = https://github.com/diemonic1/RSS-feed-in-whats-new
