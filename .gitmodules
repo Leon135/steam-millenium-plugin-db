@@ -76,3 +76,6 @@
 [submodule "plugins/size-on-disk"]
 	path = plugins/size-on-disk
 	url = https://github.com/k0d13/steam-size-on-disk
+[submodule "plugins/gratitude"]
+	path = plugins/gratitude
+	url = https://github.com/BlythT/Gratitude-Millennium-Plugin
