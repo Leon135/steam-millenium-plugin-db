@@ -67,3 +67,6 @@
 [submodule "plugins/plugins/steam-global-launch-options"]
 	path = plugins/plugins/steam-global-launch-options
 	url = https://github.com/BlafKing/steam-global-launch-options.git
+[submodule "plugins/steam-global-launch-options"]
+	path = plugins/steam-global-launch-options
+	url = https://github.com/BlafKing/steam-global-launch-options.git
