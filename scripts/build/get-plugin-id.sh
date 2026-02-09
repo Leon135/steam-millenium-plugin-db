@@ -14,7 +14,7 @@ get_plugin_id() {
     local plugin_id
 
     plugin_id=$(git -C "$repo_path" log --format='%H %ae' --reverse 2>/dev/null \
-        | grep -Fv '81448108+shdwmtr@users.noreply.github.com' \
+        | grep -Fv -e '81448108+shdwmtr@users.noreply.github.com' -e 'millennium[bot]@noreply.steambrew.app' \
         | head -1 | cut -d' ' -f1 | tr -d '\n')
 
     # Fallback to root commit if all commits are from the template bot
