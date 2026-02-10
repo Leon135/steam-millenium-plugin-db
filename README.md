@@ -61,13 +61,13 @@ Python is no longer officially supported by Millennium and will be removed entir
 | adamraichu.auto-accept-custom-launch-args | cswatch-plugin |
 | aerothemesteam | extendium |
 | dotastats | fullscreen-notifications-fix |
-| dwmx | leetify-extension |
+| dwmx | leetify-extension (in-progress) |
 | gratitude | millennium-faceit-stats |
 | hltb-millennium-plugin | non-steam-playtimes |
 | size-on-disk | steam-browser-history |
-| steam-change-window-params | steam-collections-plus |
-| steam-global-launch-options | steam-easygrid |
-| valve-internal-enabler | steam-librarian |
-|  | steam-logo-pos |
-|  | steam-taskbar-progress |
+| steam-change-window-params | steam-collections-plus (in-progress) |
+| steam-global-launch-options | steam-easygrid (in-progress) |
+| valve-internal-enabler | steam-librarian (in-progress) |
+|  | steam-logo-pos (in-progress) |
+|  | steam-taskbar-progress (in-progress) |
 |  | steamdb |
