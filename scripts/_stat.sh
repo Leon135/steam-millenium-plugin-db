@@ -27,6 +27,34 @@ while IFS= read -r line; do
     fi
 done < <(git submodule status)
 
+# Check open PRs for Python plugins being ported to Lua
+declare -A IN_PROGRESS_PLUGINS
+
+if command -v curl &>/dev/null; then
+    pr_data=$(curl -sf "https://api.github.com/repos/SteamClientHomebrew/PluginDatabase/pulls?state=open&per_page=100" 2>/dev/null)
+
+    if [[ -n "$pr_data" ]]; then
+        # Only consider PRs with [lua-port] in the title
+        lua_port_prs=$(echo "$pr_data" | jq -r '.[] | select(.title | ascii_downcase | contains("[lua-port]")) | .number' 2>/dev/null)
+
+        for pr_number in $lua_port_prs; do
+            files_data=$(curl -sf "https://api.github.com/repos/SteamClientHomebrew/PluginDatabase/pulls/${pr_number}/files" 2>/dev/null)
+
+            if [[ -n "$files_data" ]]; then
+                changed_plugins=$(echo "$files_data" | jq -r '.[].filename' 2>/dev/null | grep '^plugins/' | sed 's|^plugins/||' | cut -d'/' -f1 | sort -u)
+
+                for changed_plugin in $changed_plugins; do
+                    for py_plugin in "${PYTHON_PLUGINS[@]}"; do
+                        if [[ "$changed_plugin" == "$py_plugin" ]]; then
+                            IN_PROGRESS_PLUGINS["$py_plugin"]=1
+                        fi
+                    done
+                done
+            fi
+        done
+    fi
+fi
+
 TOTAL_PLUGINS=$(( ${#LUA_PLUGINS[@]} + ${#PYTHON_PLUGINS[@]} ))
 
 echo "## Repository Manifest"
@@ -63,6 +91,9 @@ for (( i=0; i<max_rows; i++ )); do
     if (( i < ${#PYTHON_PLUGINS[@]} )); then
         py_num="$(( i + 1 ))"
         py_name="${PYTHON_PLUGINS[$i]}"
+        if [[ -n "${IN_PROGRESS_PLUGINS[$py_name]+x}" ]]; then
+            py_name="$py_name (in-progress)"
+        fi
     else
         py_num=""
         py_name=""
