@@ -44,3 +44,32 @@ This should update your plugin to the latest version. Commit the change and open
 &nbsp;
 
 In case you wish to clone plugins at their attached commits, run `git submodule update --init`.
+## Repository Manifest
+
+The following table describes the remaining deprecated Python plugins that need to be ported to Lua.
+Python is no longer officially supported by Millennium and will be removed entirely in a future update.
+
+**Total**: 27
+ * **Lua**: 17
+ * **Python**: 10
+
+
+| Lua | Python |
+|-----|--------|
+| RSS-feed-in-whats-new | augmented-steam |
+| achievement-groups | csstats-extension |
+| adamraichu.auto-accept-custom-launch-args | cswatch-plugin |
+| aerothemesteam | extendium |
+| dotastats | fullscreen-notifications-fix |
+| dwmx | leetify-extension (in-progress) |
+| gratitude | millennium-faceit-stats |
+| hltb-millennium-plugin | non-steam-playtimes |
+| size-on-disk | steam-browser-history |
+| steam-change-window-params | steamdb |
+| steam-collections-plus |  |
+| steam-easygrid |  |
+| steam-global-launch-options |  |
+| steam-librarian |  |
+| steam-logo-pos |  |
+| steam-taskbar-progress |  |
+| valve-internal-enabler |  |
