@@ -50,8 +50,8 @@ The following table describes the remaining deprecated Python plugins that need 
 Python is no longer officially supported by Millennium and will be removed entirely in a future update.
 
 **Total**: 27
- * **Lua**: 12
- * **Python**: 15
+ * **Lua**: 13
+ * **Python**: 14
 
 
 | Lua | Python |
@@ -66,8 +66,7 @@ Python is no longer officially supported by Millennium and will be removed entir
 | hltb-millennium-plugin | non-steam-playtimes |
 | size-on-disk | steam-browser-history |
 | steam-change-window-params | steam-collections-plus (in-progress) |
-| steam-global-launch-options | steam-easygrid (in-progress) |
-| valve-internal-enabler | steam-librarian (in-progress) |
-|  | steam-logo-pos (in-progress) |
-|  | steam-taskbar-progress (in-progress) |
+| steam-easygrid | steam-librarian (in-progress) |
+| steam-global-launch-options | steam-logo-pos (in-progress) |
+| valve-internal-enabler | steam-taskbar-progress (in-progress) |
 |  | steamdb |
